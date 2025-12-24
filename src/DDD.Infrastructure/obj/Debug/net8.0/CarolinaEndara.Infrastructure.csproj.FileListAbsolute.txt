@@ -1,0 +1,17 @@
+C:\Users\LENOVO\source\repos\CarolinaEndara.Infrastructure\bin\Debug\net8.0\CarolinaEndara.Infrastructure.deps.json
+C:\Users\LENOVO\source\repos\CarolinaEndara.Infrastructure\bin\Debug\net8.0\CarolinaEndara.Infrastructure.runtimeconfig.json
+C:\Users\LENOVO\source\repos\CarolinaEndara.Infrastructure\bin\Debug\net8.0\CarolinaEndara.Infrastructure.dll
+C:\Users\LENOVO\source\repos\CarolinaEndara.Infrastructure\bin\Debug\net8.0\CarolinaEndara.Infrastructure.pdb
+C:\Users\LENOVO\source\repos\CarolinaEndara.Infrastructure\bin\Debug\net8.0\CarolinaEndara.Domain.dll
+C:\Users\LENOVO\source\repos\CarolinaEndara.Infrastructure\bin\Debug\net8.0\CarolinaEndara.Domain.pdb
+C:\Users\LENOVO\source\repos\CarolinaEndara.Infrastructure\obj\Debug\net8.0\CarolinaEndara.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\LENOVO\source\repos\CarolinaEndara.Infrastructure\obj\Debug\net8.0\CarolinaEndara.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LENOVO\source\repos\CarolinaEndara.Infrastructure\obj\Debug\net8.0\CarolinaEndara.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\LENOVO\source\repos\CarolinaEndara.Infrastructure\obj\Debug\net8.0\CarolinaEndara.Infrastructure.AssemblyInfo.cs
+C:\Users\LENOVO\source\repos\CarolinaEndara.Infrastructure\obj\Debug\net8.0\CarolinaEndara.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\source\repos\CarolinaEndara.Infrastructure\obj\Debug\net8.0\Carolina.99294F75.Up2Date
+C:\Users\LENOVO\source\repos\CarolinaEndara.Infrastructure\obj\Debug\net8.0\CarolinaEndara.Infrastructure.dll
+C:\Users\LENOVO\source\repos\CarolinaEndara.Infrastructure\obj\Debug\net8.0\refint\CarolinaEndara.Infrastructure.dll
+C:\Users\LENOVO\source\repos\CarolinaEndara.Infrastructure\obj\Debug\net8.0\CarolinaEndara.Infrastructure.pdb
+C:\Users\LENOVO\source\repos\CarolinaEndara.Infrastructure\obj\Debug\net8.0\CarolinaEndara.Infrastructure.genruntimeconfig.cache
+C:\Users\LENOVO\source\repos\CarolinaEndara.Infrastructure\obj\Debug\net8.0\ref\CarolinaEndara.Infrastructure.dll

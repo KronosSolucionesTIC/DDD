@@ -1,0 +1,11 @@
+C:\Users\LENOVO\source\repos\CarolinaEndara.Domain\bin\Debug\net8.0\CarolinaEndara.Domain.deps.json
+C:\Users\LENOVO\source\repos\CarolinaEndara.Domain\bin\Debug\net8.0\CarolinaEndara.Domain.dll
+C:\Users\LENOVO\source\repos\CarolinaEndara.Domain\bin\Debug\net8.0\CarolinaEndara.Domain.pdb
+C:\Users\LENOVO\source\repos\CarolinaEndara.Domain\obj\Debug\net8.0\CarolinaEndara.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LENOVO\source\repos\CarolinaEndara.Domain\obj\Debug\net8.0\CarolinaEndara.Domain.AssemblyInfoInputs.cache
+C:\Users\LENOVO\source\repos\CarolinaEndara.Domain\obj\Debug\net8.0\CarolinaEndara.Domain.AssemblyInfo.cs
+C:\Users\LENOVO\source\repos\CarolinaEndara.Domain\obj\Debug\net8.0\CarolinaEndara.Domain.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\source\repos\CarolinaEndara.Domain\obj\Debug\net8.0\CarolinaEndara.Domain.dll
+C:\Users\LENOVO\source\repos\CarolinaEndara.Domain\obj\Debug\net8.0\refint\CarolinaEndara.Domain.dll
+C:\Users\LENOVO\source\repos\CarolinaEndara.Domain\obj\Debug\net8.0\CarolinaEndara.Domain.pdb
+C:\Users\LENOVO\source\repos\CarolinaEndara.Domain\obj\Debug\net8.0\ref\CarolinaEndara.Domain.dll

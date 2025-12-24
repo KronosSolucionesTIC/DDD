@@ -1,0 +1,15 @@
+C:\Users\LENOVO\source\repos\CarolinaEndara.Application\bin\Debug\net8.0\CarolinaEndara.Application.deps.json
+C:\Users\LENOVO\source\repos\CarolinaEndara.Application\bin\Debug\net8.0\CarolinaEndara.Application.dll
+C:\Users\LENOVO\source\repos\CarolinaEndara.Application\bin\Debug\net8.0\CarolinaEndara.Application.pdb
+C:\Users\LENOVO\source\repos\CarolinaEndara.Application\bin\Debug\net8.0\CarolinaEndara.Domain.dll
+C:\Users\LENOVO\source\repos\CarolinaEndara.Application\bin\Debug\net8.0\CarolinaEndara.Domain.pdb
+C:\Users\LENOVO\source\repos\CarolinaEndara.Application\obj\Debug\net8.0\CarolinaEndara.Application.csproj.AssemblyReference.cache
+C:\Users\LENOVO\source\repos\CarolinaEndara.Application\obj\Debug\net8.0\CarolinaEndara.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LENOVO\source\repos\CarolinaEndara.Application\obj\Debug\net8.0\CarolinaEndara.Application.AssemblyInfoInputs.cache
+C:\Users\LENOVO\source\repos\CarolinaEndara.Application\obj\Debug\net8.0\CarolinaEndara.Application.AssemblyInfo.cs
+C:\Users\LENOVO\source\repos\CarolinaEndara.Application\obj\Debug\net8.0\CarolinaEndara.Application.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\source\repos\CarolinaEndara.Application\obj\Debug\net8.0\Carolina.EE3D2822.Up2Date
+C:\Users\LENOVO\source\repos\CarolinaEndara.Application\obj\Debug\net8.0\CarolinaEndara.Application.dll
+C:\Users\LENOVO\source\repos\CarolinaEndara.Application\obj\Debug\net8.0\refint\CarolinaEndara.Application.dll
+C:\Users\LENOVO\source\repos\CarolinaEndara.Application\obj\Debug\net8.0\CarolinaEndara.Application.pdb
+C:\Users\LENOVO\source\repos\CarolinaEndara.Application\obj\Debug\net8.0\ref\CarolinaEndara.Application.dll
