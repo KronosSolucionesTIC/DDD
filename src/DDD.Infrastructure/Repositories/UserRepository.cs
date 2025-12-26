@@ -20,4 +20,11 @@ public class UserRepository : IUserRepository
                              .AsNoTracking()
                              .ToListAsync();
     }
+
+    public async Task<User?> GetByUsernameAsync(string username)
+    {
+        return await _context.Users
+            .AsNoTracking()
+            .FirstOrDefaultAsync(u => u.UserName == username);
+    }
 }

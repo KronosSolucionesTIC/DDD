@@ -3,14 +3,21 @@
     public class User
     {
         public Guid Id { get; private set; }
-        public string Name { get; private set; }
-        public string Email { get; private set; }
+        public string UserName { get; private set; }
+        public string PassWordHash { get; private set; }
 
-        public User(Guid id, string name, string email)
+        protected User() { }
+
+        public User(Guid id, string username, string passwordHash)
         {
             Id = id;
-            Name = name;
-            Email = email;
+            UserName = username;
+            PassWordHash = passwordHash;
+        }
+
+        public bool ValidatePassword(string passwordHash)
+        {
+            return PassWordHash == passwordHash;
         }
     }
 }

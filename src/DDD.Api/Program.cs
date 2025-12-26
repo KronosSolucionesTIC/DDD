@@ -1,4 +1,5 @@
 using DDD.Api.Middlewares;
+using DDD.Application.Users.Commands;
 using DDD.Application.Users.Queries;
 using DDD.Domain.Repositories;
 using DDD.Infrastructure.Persistence;
@@ -17,6 +18,9 @@ builder.Services.AddDbContext<DDDDbContext>(options =>
 builder.Services.AddControllers();
 builder.Services.AddScoped<GetAllUsersQuery>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<LoginUserCommand>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+
 builder.Services.AddEndpointsApiExplorer();
 
 var app = builder.Build();

@@ -8,7 +8,7 @@ public static class UserMapper
     public static UserResponseDto ToDto(User user)
         => new(
             user.Id,
-            user.Name,
-            user.Email
+            user.UserName,
+            user.PassWordHash
         );
 }

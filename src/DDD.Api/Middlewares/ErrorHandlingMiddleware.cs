@@ -44,7 +44,7 @@ public class ErrorHandlingMiddleware
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "Unhandled error");
+            _logger.LogError(ex, ex.Message);
             await WriteErrorAsync(
                 context,
                 HttpStatusCode.InternalServerError,
