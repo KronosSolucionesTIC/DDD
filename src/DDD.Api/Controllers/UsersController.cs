@@ -18,6 +18,7 @@ namespace DDD.Api.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
+            
             var result = await _query.ExecuteAsync();
 
             var response = ApiResponseMapper

@@ -14,12 +14,13 @@ builder.Services.AddDbContext<DDDDbContext>(options =>
         new MySqlServerVersion(new Version(8, 0, 36))
     ));
 
-
 builder.Services.AddControllers();
 builder.Services.AddScoped<GetAllUsersQuery>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<LoginUserCommand>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IMenuRepository, MenuRepository>();
+builder.Services.AddScoped<GetMenuQuery>();
 
 builder.Services.AddEndpointsApiExplorer();
 
