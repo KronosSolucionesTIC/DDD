@@ -1,4 +1,5 @@
-﻿using DDD.Application.Users.Commands;
+﻿using DDD.Api.Common;
+using DDD.Application.Users.Commands;
 using DDD.Application.Users.Dtos;
 using Microsoft.AspNetCore.Mvc;
 
@@ -20,10 +21,13 @@ namespace DDD.Api.Controllers
         {
             var result = await _loginUserCommand.ExecuteAsync(request);
 
-            if (!result.IsSuccess)
-                return Unauthorized(result.Error);
+            var response = ApiResponseMapper
+                .FromResult(result, "Login obtenido correctamente");
 
-            return Ok(result.Value);
+            if (!response.Success)
+                return BadRequest(response);
+
+            return Ok(response);
         }
     }
 }

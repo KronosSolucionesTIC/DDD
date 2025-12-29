@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using DDD.Api.Common;
 
 [ApiController]
 [Route("api/menu")]
@@ -15,6 +16,12 @@ public class MenuController : ControllerBase
     public async Task<IActionResult> Get()
     {
         var result = await _query.ExecuteAsync();
-        return Ok(result);
+        var response = ApiResponseMapper
+            .FromResult(result, "Menu obtenido correctamente");
+
+        if (!response.Success)
+            return BadRequest(response);
+
+        return Ok(response);
     }
 }
