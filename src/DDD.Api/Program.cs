@@ -24,7 +24,17 @@ builder.Services.AddScoped<GetMenuQuery>();
 
 builder.Services.AddEndpointsApiExplorer();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAngular",
+        p => p.AllowAnyOrigin()
+              .AllowAnyHeader()
+              .AllowAnyMethod());
+});
+
 var app = builder.Build();
+
+app.UseCors("AllowAngular");
 
 app.UseHttpsRedirection();
 
