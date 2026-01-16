@@ -2321,11 +2321,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LENOVO\\source\\repos\\Domain\\DDD\\src\\DDD.Infrastructure\\DDD.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\LENOVO\\source\\repos\\DDD\\src\\DDD.Infrastructure\\DDD.Infrastructure.csproj",
       "projectName": "DDD.Infrastructure",
-      "projectPath": "C:\\Users\\LENOVO\\source\\repos\\Domain\\DDD\\src\\DDD.Infrastructure\\DDD.Infrastructure.csproj",
+      "projectPath": "C:\\Users\\LENOVO\\source\\repos\\DDD\\src\\DDD.Infrastructure\\DDD.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LENOVO\\source\\repos\\Domain\\DDD\\src\\DDD.Infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\LENOVO\\source\\repos\\DDD\\src\\DDD.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2346,8 +2346,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\LENOVO\\source\\repos\\Domain\\DDD\\src\\DDD.Domain\\DDD.Domain.csproj": {
-              "projectPath": "C:\\Users\\LENOVO\\source\\repos\\Domain\\DDD\\src\\DDD.Domain\\DDD.Domain.csproj"
+            "C:\\Users\\LENOVO\\source\\repos\\DDD\\src\\DDD.Domain\\DDD.Domain.csproj": {
+              "projectPath": "C:\\Users\\LENOVO\\source\\repos\\DDD\\src\\DDD.Domain\\DDD.Domain.csproj"
             }
           }
         }

@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LENOVO\\source\\repos\\Domain\\DDD\\src\\DDD.Domain\\DDD.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\LENOVO\\source\\repos\\DDD\\src\\DDD.Domain\\DDD.Domain.csproj",
       "projectName": "DDD.Domain",
-      "projectPath": "C:\\Users\\LENOVO\\source\\repos\\Domain\\DDD\\src\\DDD.Domain\\DDD.Domain.csproj",
+      "projectPath": "C:\\Users\\LENOVO\\source\\repos\\DDD\\src\\DDD.Domain\\DDD.Domain.csproj",
       "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LENOVO\\source\\repos\\Domain\\DDD\\src\\DDD.Domain\\obj\\",
+      "outputPath": "C:\\Users\\LENOVO\\source\\repos\\DDD\\src\\DDD.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

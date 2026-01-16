@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LENOVO\\source\\repos\\Domain\\DDD\\test\\DDD.Application.Tests\\DDD.Application.Tests.csproj": {}
+    "C:\\Users\\LENOVO\\source\\repos\\DDD\\test\\DDD.Application.Tests\\DDD.Application.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LENOVO\\source\\repos\\Domain\\DDD\\src\\DDD.Application\\DDD.Application.csproj": {
+    "C:\\Users\\LENOVO\\source\\repos\\DDD\\src\\DDD.Application\\DDD.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LENOVO\\source\\repos\\Domain\\DDD\\src\\DDD.Application\\DDD.Application.csproj",
+        "projectUniqueName": "C:\\Users\\LENOVO\\source\\repos\\DDD\\src\\DDD.Application\\DDD.Application.csproj",
         "projectName": "DDD.Application",
-        "projectPath": "C:\\Users\\LENOVO\\source\\repos\\Domain\\DDD\\src\\DDD.Application\\DDD.Application.csproj",
+        "projectPath": "C:\\Users\\LENOVO\\source\\repos\\DDD\\src\\DDD.Application\\DDD.Application.csproj",
         "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LENOVO\\source\\repos\\Domain\\DDD\\src\\DDD.Application\\obj\\",
+        "outputPath": "C:\\Users\\LENOVO\\source\\repos\\DDD\\src\\DDD.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\LENOVO\\source\\repos\\Domain\\DDD\\src\\DDD.Domain\\DDD.Domain.csproj": {
-                "projectPath": "C:\\Users\\LENOVO\\source\\repos\\Domain\\DDD\\src\\DDD.Domain\\DDD.Domain.csproj"
+              "C:\\Users\\LENOVO\\source\\repos\\DDD\\src\\DDD.Domain\\DDD.Domain.csproj": {
+                "projectPath": "C:\\Users\\LENOVO\\source\\repos\\DDD\\src\\DDD.Domain\\DDD.Domain.csproj"
               }
             }
           }
@@ -72,14 +72,14 @@
         }
       }
     },
-    "C:\\Users\\LENOVO\\source\\repos\\Domain\\DDD\\src\\DDD.Domain\\DDD.Domain.csproj": {
+    "C:\\Users\\LENOVO\\source\\repos\\DDD\\src\\DDD.Domain\\DDD.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LENOVO\\source\\repos\\Domain\\DDD\\src\\DDD.Domain\\DDD.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\LENOVO\\source\\repos\\DDD\\src\\DDD.Domain\\DDD.Domain.csproj",
         "projectName": "DDD.Domain",
-        "projectPath": "C:\\Users\\LENOVO\\source\\repos\\Domain\\DDD\\src\\DDD.Domain\\DDD.Domain.csproj",
+        "projectPath": "C:\\Users\\LENOVO\\source\\repos\\DDD\\src\\DDD.Domain\\DDD.Domain.csproj",
         "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LENOVO\\source\\repos\\Domain\\DDD\\src\\DDD.Domain\\obj\\",
+        "outputPath": "C:\\Users\\LENOVO\\source\\repos\\DDD\\src\\DDD.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -136,14 +136,14 @@
         }
       }
     },
-    "C:\\Users\\LENOVO\\source\\repos\\Domain\\DDD\\test\\DDD.Application.Tests\\DDD.Application.Tests.csproj": {
+    "C:\\Users\\LENOVO\\source\\repos\\DDD\\test\\DDD.Application.Tests\\DDD.Application.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LENOVO\\source\\repos\\Domain\\DDD\\test\\DDD.Application.Tests\\DDD.Application.Tests.csproj",
+        "projectUniqueName": "C:\\Users\\LENOVO\\source\\repos\\DDD\\test\\DDD.Application.Tests\\DDD.Application.Tests.csproj",
         "projectName": "DDD.Application.Tests",
-        "projectPath": "C:\\Users\\LENOVO\\source\\repos\\Domain\\DDD\\test\\DDD.Application.Tests\\DDD.Application.Tests.csproj",
+        "projectPath": "C:\\Users\\LENOVO\\source\\repos\\DDD\\test\\DDD.Application.Tests\\DDD.Application.Tests.csproj",
         "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LENOVO\\source\\repos\\Domain\\DDD\\test\\DDD.Application.Tests\\obj\\",
+        "outputPath": "C:\\Users\\LENOVO\\source\\repos\\DDD\\test\\DDD.Application.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -164,11 +164,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\LENOVO\\source\\repos\\Domain\\DDD\\src\\DDD.Application\\DDD.Application.csproj": {
-                "projectPath": "C:\\Users\\LENOVO\\source\\repos\\Domain\\DDD\\src\\DDD.Application\\DDD.Application.csproj"
+              "C:\\Users\\LENOVO\\source\\repos\\DDD\\src\\DDD.Application\\DDD.Application.csproj": {
+                "projectPath": "C:\\Users\\LENOVO\\source\\repos\\DDD\\src\\DDD.Application\\DDD.Application.csproj"
               },
-              "C:\\Users\\LENOVO\\source\\repos\\Domain\\DDD\\src\\DDD.Domain\\DDD.Domain.csproj": {
-                "projectPath": "C:\\Users\\LENOVO\\source\\repos\\Domain\\DDD\\src\\DDD.Domain\\DDD.Domain.csproj"
+              "C:\\Users\\LENOVO\\source\\repos\\DDD\\src\\DDD.Domain\\DDD.Domain.csproj": {
+                "projectPath": "C:\\Users\\LENOVO\\source\\repos\\DDD\\src\\DDD.Domain\\DDD.Domain.csproj"
               }
             }
           }

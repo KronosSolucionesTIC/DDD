@@ -24,6 +24,8 @@ builder.Services.AddScoped<GetMenuQuery>();
 
 builder.Services.AddEndpointsApiExplorer();
 
+builder.Services.AddSwaggerGen();
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAngular",
@@ -37,6 +39,16 @@ var app = builder.Build();
 app.UseCors("AllowAngular");
 
 app.UseHttpsRedirection();
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "DDD.Api v1");
+        c.RoutePrefix = "swagger"; // opcional
+    });
+}
 
 app.UseMiddleware<ErrorHandlingMiddleware>();
 
