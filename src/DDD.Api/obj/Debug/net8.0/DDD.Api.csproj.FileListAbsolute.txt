@@ -1144,6 +1144,7 @@ C:\Users\LENOVO\source\repos\DDD\src\DDD.Api\bin\Debug\net8.0\MySqlConnector.dll
 C:\Users\LENOVO\source\repos\DDD\src\DDD.Api\bin\Debug\net8.0\Pomelo.EntityFrameworkCore.MySql.dll
 C:\Users\LENOVO\source\repos\DDD\src\DDD.Api\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\LENOVO\source\repos\DDD\src\DDD.Api\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\LENOVO\source\repos\DDD\src\DDD.Api\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\LENOVO\source\repos\DDD\src\DDD.Api\bin\Debug\net8.0\System.CodeDom.dll
 C:\Users\LENOVO\source\repos\DDD\src\DDD.Api\bin\Debug\net8.0\System.Composition.AttributedModel.dll
 C:\Users\LENOVO\source\repos\DDD\src\DDD.Api\bin\Debug\net8.0\System.Composition.Convention.dll
@@ -1230,4 +1231,3 @@ C:\Users\LENOVO\source\repos\DDD\src\DDD.Api\obj\Debug\net8.0\refint\DDD.Api.dll
 C:\Users\LENOVO\source\repos\DDD\src\DDD.Api\obj\Debug\net8.0\DDD.Api.pdb
 C:\Users\LENOVO\source\repos\DDD\src\DDD.Api\obj\Debug\net8.0\DDD.Api.genruntimeconfig.cache
 C:\Users\LENOVO\source\repos\DDD\src\DDD.Api\obj\Debug\net8.0\ref\DDD.Api.dll
-C:\Users\LENOVO\source\repos\DDD\src\DDD.Api\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll

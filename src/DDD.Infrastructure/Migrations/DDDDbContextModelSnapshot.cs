@@ -19,6 +19,29 @@ namespace DDD.Infrastructure.Migrations
                 .HasAnnotation("ProductVersion", "8.0.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
+            modelBuilder.Entity("DDD.Domain.Entities.Client", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("char(36)");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("varchar(150)");
+
+                    b.Property<DateTime>("RegistrationDate")
+                        .HasColumnType("datetime(6)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Clients", (string)null);
+                });
+
             modelBuilder.Entity("DDD.Domain.Entities.MenuItem", b =>
                 {
                     b.Property<Guid>("Id")
@@ -49,26 +72,6 @@ namespace DDD.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("MenuItems", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("11111111-1111-1111-1111-111111111111"),
-                            Icon = "users",
-                            IsActive = true,
-                            Order = 1,
-                            Route = "/users",
-                            Title = "Usuarios"
-                        },
-                        new
-                        {
-                            Id = new Guid("22222222-2222-2222-2222-222222222222"),
-                            Icon = "payments",
-                            IsActive = true,
-                            Order = 2,
-                            Route = "/payments",
-                            Title = "Pagos"
-                        });
                 });
 
             modelBuilder.Entity("DDD.Domain.Entities.User", b =>
@@ -79,8 +82,7 @@ namespace DDD.Infrastructure.Migrations
 
                     b.Property<string>("PassWordHash")
                         .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("varchar(200)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("UserName")
                         .IsRequired()

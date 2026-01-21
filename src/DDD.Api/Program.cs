@@ -1,4 +1,5 @@
 using DDD.Api.Middlewares;
+using DDD.Application.Clients.Queries;
 using DDD.Application.Users.Commands;
 using DDD.Application.Users.Queries;
 using DDD.Domain.Repositories;
@@ -15,10 +16,11 @@ builder.Services.AddDbContext<DDDDbContext>(options =>
     ));
 
 builder.Services.AddControllers();
+builder.Services.AddScoped<GetAllClientsQuery>();
+builder.Services.AddScoped<IClientRepository, ClientRepository>();
 builder.Services.AddScoped<GetAllUsersQuery>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<LoginUserCommand>();
-builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IMenuRepository, MenuRepository>();
 builder.Services.AddScoped<GetMenuQuery>();
 
