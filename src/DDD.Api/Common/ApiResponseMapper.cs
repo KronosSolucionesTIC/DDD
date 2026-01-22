@@ -1,6 +1,5 @@
-﻿using DDD.Application.Common;
-
-namespace DDD.Api.Common;
+﻿using DDD.Api.Common;
+using DDD.Application.Common;
 
 public static class ApiResponseMapper
 {
@@ -13,4 +12,10 @@ public static class ApiResponseMapper
             ? ApiResponse<T>.Ok(result.Value!, successMessage)
             : ApiResponse<T>.Fail(result.Error!);
     }
+
+    public static ApiResponse Success(string message)
+        => ApiResponse.Ok(message);
+
+    public static ApiResponse Fail(string message)
+        => ApiResponse.Fail(message);
 }

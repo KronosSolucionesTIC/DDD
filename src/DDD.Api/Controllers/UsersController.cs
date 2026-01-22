@@ -1,5 +1,4 @@
-﻿using DDD.Api.Common;
-using DDD.Application.Users.Queries;
+﻿using DDD.Application.Users.Queries;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DDD.Api.Controllers

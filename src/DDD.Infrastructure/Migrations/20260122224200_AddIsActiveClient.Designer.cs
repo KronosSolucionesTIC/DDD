@@ -3,6 +3,7 @@ using System;
 using DDD.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DDD.Infrastructure.Migrations
 {
     [DbContext(typeof(DDDDbContext))]
-    partial class DDDDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260122224200_AddIsActiveClient")]
+    partial class AddIsActiveClient
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -1,4 +1,7 @@
 using DDD.Api.Middlewares;
+using DDD.Application.Clients.Commands;
+using DDD.Application.Clients.Commands.CreateClient;
+using DDD.Application.Clients.Commands.DeactivateClient;
 using DDD.Application.Clients.Queries;
 using DDD.Application.Users.Commands;
 using DDD.Application.Users.Queries;
@@ -16,6 +19,9 @@ builder.Services.AddDbContext<DDDDbContext>(options =>
     ));
 
 builder.Services.AddControllers();
+builder.Services.AddScoped<CreateClientCommandHandler>();
+builder.Services.AddScoped<UpdateClientCommandHandler>();
+builder.Services.AddScoped<DeactivateClientCommandHandler>();
 builder.Services.AddScoped<GetAllClientsQuery>();
 builder.Services.AddScoped<IClientRepository, ClientRepository>();
 builder.Services.AddScoped<GetAllUsersQuery>();

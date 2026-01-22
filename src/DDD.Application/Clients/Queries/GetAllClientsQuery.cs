@@ -1,6 +1,6 @@
-﻿using DDD.Application.Common;
-using DDD.Application.Clients.Dtos;
+﻿using DDD.Application.Clients.Dtos;
 using DDD.Application.Clients.Mappers;
+using DDD.Application.Common;
 using DDD.Domain.Repositories;
 
 namespace DDD.Application.Clients.Queries

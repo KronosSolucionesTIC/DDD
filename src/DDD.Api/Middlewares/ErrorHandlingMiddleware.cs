@@ -1,7 +1,7 @@
-﻿using System.Net;
-using System.Text.Json;
-using DDD.Api.Common;
+﻿using DDD.Api.Common;
 using DDD.Domain.Exceptions;
+using System.Net;
+using System.Text.Json;
 
 namespace DDD.Api.Middlewares;
 

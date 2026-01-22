@@ -1,33 +1,42 @@
 ﻿namespace DDD.Api.Common;
 
-public class ApiResponse<T>
+public class ApiResponse
 {
-    public bool Success { get; init; }
-    public string? Message { get; init; }
-    public T? Data { get; init; }
-    public string? ErrorCode { get; init; }
+    public bool Success { get; protected set; }
+    public string? Message { get; protected set; }
 
-    private ApiResponse() { }
-
-    public static ApiResponse<T> Ok(
-        T data,
-        string? message = null
-    )
-        => new()
+    public static ApiResponse Ok(string? message = null)
+        => new ApiResponse
         {
             Success = true,
-            Data = data,
             Message = message
         };
 
-    public static ApiResponse<T> Fail(
-        string message,
-        string? errorCode = null
-    )
-        => new()
+    public static ApiResponse Fail(string message)
+        => new ApiResponse
+        {
+            Success = false,
+            Message = message
+        };
+}
+
+public class ApiResponse<T> : ApiResponse
+{
+    public T? Data { get; private set; }
+
+    public static ApiResponse<T> Ok(T data, string? message = null)
+        => new ApiResponse<T>
+        {
+            Success = true,
+            Message = message,
+            Data = data
+        };
+
+    public static ApiResponse<T> Fail(string message)
+        => new ApiResponse<T>
         {
             Success = false,
             Message = message,
-            ErrorCode = errorCode
+            Data = default
         };
 }

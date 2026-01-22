@@ -1,5 +1,4 @@
-﻿using DDD.Api.Common;
-using DDD.Application.Users.Commands;
+﻿using DDD.Application.Users.Commands;
 using DDD.Application.Users.Dtos;
 using Microsoft.AspNetCore.Mvc;
 

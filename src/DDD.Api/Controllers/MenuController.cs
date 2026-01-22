@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using DDD.Api.Common;
 
 [ApiController]
 [Route("api/menu")]
