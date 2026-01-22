@@ -15,5 +15,9 @@ public class ClientConfiguration : IEntityTypeConfiguration<Client>
         builder.Property(u => u.Name)
             .IsRequired()
             .HasMaxLength(150);
+
+        builder.Property(u => u.Email)
+            .IsRequired()
+            .HasMaxLength(150);
     }
 }

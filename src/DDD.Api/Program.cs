@@ -14,7 +14,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<DDDDbContext>(options =>
     options.UseMySql(
-        "Server=localhost;Port=3306;Database=carolina_endara;User=root;Password=;",
+        builder.Configuration.GetConnectionString("DefaultConnection"),
         new MySqlServerVersion(new Version(8, 0, 36))
     ));
 

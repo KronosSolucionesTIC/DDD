@@ -27,7 +27,8 @@ namespace DDD.Infrastructure.Migrations
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasMaxLength(150)
+                        .HasColumnType("varchar(150)");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("tinyint(1)");
