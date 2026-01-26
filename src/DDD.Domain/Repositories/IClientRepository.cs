@@ -8,5 +8,6 @@ namespace DDD.Domain.Repositories
         Task AddAsync(Client client);
         Task<Client?> GetByIdAsync(Guid id);
         Task UpdateAsync(Client client);
+        Task<bool> ExistsAsync(Guid clientId);
     }
 }

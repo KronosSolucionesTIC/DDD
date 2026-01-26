@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DDD.Infrastructure.Migrations
 {
     [DbContext(typeof(DDDDbContext))]
-    [Migration("20260121014221_AddClientTable")]
-    partial class AddClientTable
+    [Migration("20260124035955_AddColumIsActive")]
+    partial class AddColumIsActive
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,12 +25,15 @@ namespace DDD.Infrastructure.Migrations
             modelBuilder.Entity("DDD.Domain.Entities.Client", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("char(36)");
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasMaxLength(150)
+                        .HasColumnType("varchar(150)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -77,6 +80,34 @@ namespace DDD.Infrastructure.Migrations
                     b.ToTable("MenuItems", (string)null);
                 });
 
+            modelBuilder.Entity("DDD.Domain.Entities.Order", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("char(36)");
+
+                    b.Property<Guid>("ClientId")
+                        .HasColumnType("char(36)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<decimal>("TotalAmount")
+                        .HasColumnType("decimal(65,30)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ClientId");
+
+                    b.ToTable("Orders", (string)null);
+                });
+
             modelBuilder.Entity("DDD.Domain.Entities.User", b =>
                 {
                     b.Property<Guid>("Id")
@@ -98,6 +129,20 @@ namespace DDD.Infrastructure.Migrations
                         .IsUnique();
 
                     b.ToTable("Users", (string)null);
+                });
+
+            modelBuilder.Entity("DDD.Domain.Entities.Order", b =>
+                {
+                    b.HasOne("DDD.Domain.Entities.Client", null)
+                        .WithMany("Orders")
+                        .HasForeignKey("ClientId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("DDD.Domain.Entities.Client", b =>
+                {
+                    b.Navigation("Orders");
                 });
 #pragma warning restore 612, 618
         }

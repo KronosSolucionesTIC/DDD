@@ -11,7 +11,7 @@ public class Result
         Error = error;
     }
 
-    public static Result Success()
+    public static Result Success(string message = null)
         => new(true, null);
 
     public static Result Failure(string error)

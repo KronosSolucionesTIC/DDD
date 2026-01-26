@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DDD.Infrastructure.Migrations
 {
     [DbContext(typeof(DDDDbContext))]
-    [Migration("20260122231358_AddEmailConfiguration")]
-    partial class AddEmailConfiguration
+    [Migration("20260123124559_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,7 +25,6 @@ namespace DDD.Infrastructure.Migrations
             modelBuilder.Entity("DDD.Domain.Entities.Client", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("char(36)");
 
                     b.Property<string>("Email")
@@ -81,6 +80,31 @@ namespace DDD.Infrastructure.Migrations
                     b.ToTable("MenuItems", (string)null);
                 });
 
+            modelBuilder.Entity("DDD.Domain.Entities.Order", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("char(36)");
+
+                    b.Property<Guid>("ClientId")
+                        .HasColumnType("char(36)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<decimal>("TotalAmount")
+                        .HasColumnType("decimal(65,30)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ClientId");
+
+                    b.ToTable("Orders", (string)null);
+                });
+
             modelBuilder.Entity("DDD.Domain.Entities.User", b =>
                 {
                     b.Property<Guid>("Id")
@@ -102,6 +126,15 @@ namespace DDD.Infrastructure.Migrations
                         .IsUnique();
 
                     b.ToTable("Users", (string)null);
+                });
+
+            modelBuilder.Entity("DDD.Domain.Entities.Order", b =>
+                {
+                    b.HasOne("DDD.Domain.Entities.Client", null)
+                        .WithMany()
+                        .HasForeignKey("ClientId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

@@ -1130,6 +1130,7 @@
       },
       "DDD.Infrastructure/1.0.0": {
         "dependencies": {
+          "DDD.Application": "1.0.0",
           "DDD.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore.Design": "8.0.0",
           "Microsoft.Extensions.Configuration": "10.0.2",

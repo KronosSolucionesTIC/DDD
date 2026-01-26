@@ -10,7 +10,15 @@ public class Client
     public DateTime RegistrationDate { get; private set; }
     public bool IsActive { get; private set; }
 
+    private readonly List<Order> _orders = new();
+    public IReadOnlyCollection<Order> Orders => _orders;
+
     private Client() { } // EF Core
+
+    public void AddOrder(Order order)
+    {
+        _orders.Add(order);
+    }
 
     public Client(string name, string email)
     {

@@ -1,9 +1,8 @@
 ﻿using DDD.Domain.Entities;
 using DDD.Domain.Repositories;
-using DDD.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 
-namespace DDD.Infrastructure.Repositories;
+namespace DDD.Infrastructure.Persistence.Repositories;
 
 public class ClientRepository : IClientRepository
 {
@@ -37,5 +36,12 @@ public class ClientRepository : IClientRepository
     {
         _context.Clients.Update(client);
         await _context.SaveChangesAsync();
+    }
+
+    public async Task<bool> ExistsAsync(Guid clientId)
+    {
+        return await _context.Clients
+            .AsNoTracking()
+            .AnyAsync(c => c.Id == clientId);
     }
 }

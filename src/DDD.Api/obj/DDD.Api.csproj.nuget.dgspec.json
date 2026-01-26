@@ -248,6 +248,9 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+              "C:\\Users\\LENOVO\\source\\repos\\DDD\\src\\DDD.Application\\DDD.Application.csproj": {
+                "projectPath": "C:\\Users\\LENOVO\\source\\repos\\DDD\\src\\DDD.Application\\DDD.Application.csproj"
+              },
               "C:\\Users\\LENOVO\\source\\repos\\DDD\\src\\DDD.Domain\\DDD.Domain.csproj": {
                 "projectPath": "C:\\Users\\LENOVO\\source\\repos\\DDD\\src\\DDD.Domain\\DDD.Domain.csproj"
               }

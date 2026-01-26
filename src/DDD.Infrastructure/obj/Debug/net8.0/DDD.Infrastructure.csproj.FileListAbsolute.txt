@@ -34,11 +34,15 @@ C:\Users\LENOVO\source\repos\Domain\DDD\src\DDD.Infrastructure\obj\Debug\net8.0\
 C:\Users\LENOVO\source\repos\Domain\DDD\src\DDD.Infrastructure\obj\Debug\net8.0\DDD.Infrastructure.pdb
 C:\Users\LENOVO\source\repos\Domain\DDD\src\DDD.Infrastructure\obj\Debug\net8.0\DDD.Infrastructure.genruntimeconfig.cache
 C:\Users\LENOVO\source\repos\Domain\DDD\src\DDD.Infrastructure\obj\Debug\net8.0\ref\DDD.Infrastructure.dll
+C:\Users\LENOVO\source\repos\DDD\src\DDD.Infrastructure\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\LENOVO\source\repos\DDD\src\DDD.Infrastructure\bin\Debug\net8.0\appsettings.json
 C:\Users\LENOVO\source\repos\DDD\src\DDD.Infrastructure\bin\Debug\net8.0\DDD.Infrastructure.deps.json
 C:\Users\LENOVO\source\repos\DDD\src\DDD.Infrastructure\bin\Debug\net8.0\DDD.Infrastructure.runtimeconfig.json
 C:\Users\LENOVO\source\repos\DDD\src\DDD.Infrastructure\bin\Debug\net8.0\DDD.Infrastructure.dll
 C:\Users\LENOVO\source\repos\DDD\src\DDD.Infrastructure\bin\Debug\net8.0\DDD.Infrastructure.pdb
+C:\Users\LENOVO\source\repos\DDD\src\DDD.Infrastructure\bin\Debug\net8.0\DDD.Application.dll
 C:\Users\LENOVO\source\repos\DDD\src\DDD.Infrastructure\bin\Debug\net8.0\DDD.Domain.dll
+C:\Users\LENOVO\source\repos\DDD\src\DDD.Infrastructure\bin\Debug\net8.0\DDD.Application.pdb
 C:\Users\LENOVO\source\repos\DDD\src\DDD.Infrastructure\bin\Debug\net8.0\DDD.Domain.pdb
 C:\Users\LENOVO\source\repos\DDD\src\DDD.Infrastructure\obj\Debug\net8.0\DDD.Infrastructure.csproj.AssemblyReference.cache
 C:\Users\LENOVO\source\repos\DDD\src\DDD.Infrastructure\obj\Debug\net8.0\DDD.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig

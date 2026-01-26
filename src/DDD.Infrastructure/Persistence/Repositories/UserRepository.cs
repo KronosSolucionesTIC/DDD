@@ -1,9 +1,8 @@
 ﻿using DDD.Domain.Entities;
 using DDD.Domain.Repositories;
-using DDD.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 
-namespace DDD.Infrastructure.Repositories;
+namespace DDD.Infrastructure.Persistence.Repositories;
 
 public class UserRepository : IUserRepository
 {
