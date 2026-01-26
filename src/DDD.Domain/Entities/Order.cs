@@ -19,6 +19,7 @@ namespace DDD.Domain.Entities
             ClientId = clientId;
             TotalAmount = totalAmount;
             CreatedAt = DateTime.UtcNow;
+            IsActive = true;
 
             Validate();
         }

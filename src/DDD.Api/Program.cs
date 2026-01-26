@@ -35,7 +35,7 @@ builder.Services.AddScoped<CreateOrderCommandHandler>();
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 builder.Services.AddScoped<IOrderReadRepository, OrderReadRepository>();
-builder.Services.AddScoped<GetAllOrdersEnrichedQuery>();
+builder.Services.AddScoped<GetAllOrdersPaginationQuery>();
 builder.Services.AddScoped<UpdateOrderCommandHandler>();
 builder.Services.AddScoped<DeactivateOrderCommandHandler>();
 

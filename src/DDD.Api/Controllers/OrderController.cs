@@ -10,18 +10,18 @@ namespace DDD.Api.Controllers
     public class OrdersController : ControllerBase
     {
         private readonly CreateOrderCommandHandler _createHandler;
-        private readonly GetAllOrdersEnrichedQuery _getAllOrdersEnrichedQuery;
+        private readonly GetAllOrdersPaginationQuery _getAllOrdersPaginationQuery;
         private readonly UpdateOrderCommandHandler _updateHandler;
         private readonly DeactivateOrderCommandHandler _deactivateHandler;
 
         public OrdersController(
             CreateOrderCommandHandler createOrderHandler, 
-            GetAllOrdersEnrichedQuery getAllOrdersEnrichedQuery,
+            GetAllOrdersPaginationQuery getAllOrdersPaginationQuery,
             UpdateOrderCommandHandler updateOrderHandler,
             DeactivateOrderCommandHandler deactivateOrderHandler)
         {
             _createHandler = createOrderHandler;
-            _getAllOrdersEnrichedQuery = getAllOrdersEnrichedQuery;
+            _getAllOrdersPaginationQuery = getAllOrdersPaginationQuery;
             _updateHandler = updateOrderHandler;
             _deactivateHandler = deactivateOrderHandler;
         }
@@ -45,12 +45,27 @@ namespace DDD.Api.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get()
+        public async Task<IActionResult> Get(
+            [FromQuery] int page = 1,
+            [FromQuery] int pageSize = 10,
+            [FromQuery] Guid? clientId = null,
+            [FromQuery] DateTime? fromDate = null,
+            [FromQuery] DateTime? toDate = null)
         {
-            var result = await _getAllOrdersEnrichedQuery.ExecuteAsync();
+            var result = await _getAllOrdersPaginationQuery.ExecuteAsync(
+                page,
+                pageSize,
+                clientId,
+                fromDate,
+                toDate
+            );
 
-            return Ok(ApiResponseMapper
-                .FromResult(result, "Órdenes obtenidas correctamente"));
+            return Ok(
+                ApiResponseMapper.FromResult(
+                    result,
+                    "Órdenes obtenidas correctamente"
+                )
+            );
         }
 
         [HttpPut("{id}")]
