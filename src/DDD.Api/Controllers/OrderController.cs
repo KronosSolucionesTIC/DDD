@@ -1,6 +1,8 @@
-﻿using DDD.Application.Orders.Commands;
+﻿using DDD.Application.Common;
+using DDD.Application.Orders.Commands;
 using DDD.Application.Orders.Commands.DeactivateOrder;
 using DDD.Application.Orders.DTOs;
+using DDD.Application.Orders.Queries;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DDD.Api.Controllers
@@ -11,17 +13,20 @@ namespace DDD.Api.Controllers
     {
         private readonly CreateOrderCommandHandler _createHandler;
         private readonly GetAllOrdersPaginationQuery _getAllOrdersPaginationQuery;
+        private readonly GetOrder _getOrder;
         private readonly UpdateOrderCommandHandler _updateHandler;
         private readonly DeactivateOrderCommandHandler _deactivateHandler;
 
         public OrdersController(
             CreateOrderCommandHandler createOrderHandler, 
             GetAllOrdersPaginationQuery getAllOrdersPaginationQuery,
+            GetOrder getOrder,
             UpdateOrderCommandHandler updateOrderHandler,
             DeactivateOrderCommandHandler deactivateOrderHandler)
         {
             _createHandler = createOrderHandler;
             _getAllOrdersPaginationQuery = getAllOrdersPaginationQuery;
+            _getOrder = getOrder;
             _updateHandler = updateOrderHandler;
             _deactivateHandler = deactivateOrderHandler;
         }
@@ -64,6 +69,24 @@ namespace DDD.Api.Controllers
                 ApiResponseMapper.FromResult(
                     result,
                     "Órdenes obtenidas correctamente"
+                )
+            );
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetById(Guid id)
+        {
+            var order = await _getOrder.ExecuteAsync(id);
+            if (order == null)
+            {
+                return NotFound(
+                    ApiResponseMapper.Fail("Orden no encontrada")
+                );
+            } 
+            return Ok(
+                ApiResponseMapper.FromResult(
+                    Result<OrderResponseDto>.Success(order),
+                    "Orden obtenida correctamente"
                 )
             );
         }

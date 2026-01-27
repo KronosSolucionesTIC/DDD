@@ -6,6 +6,7 @@ using DDD.Application.Clients.Queries;
 using DDD.Application.Orders.Commands;
 using DDD.Application.Orders.Commands.DeactivateOrder;
 using DDD.Application.Orders.Interfaces;
+using DDD.Application.Orders.Queries;
 using DDD.Application.Users.Commands;
 using DDD.Application.Users.Queries;
 using DDD.Domain.Repositories;
@@ -29,6 +30,7 @@ builder.Services.AddScoped<UpdateClientCommandHandler>();
 builder.Services.AddScoped<DeactivateClientCommandHandler>();
 builder.Services.AddScoped<GetAllClientsQuery>();
 builder.Services.AddScoped<IClientRepository, ClientRepository>();
+builder.Services.AddScoped<GetClient>();
 
 //Orders
 builder.Services.AddScoped<CreateOrderCommandHandler>();
@@ -36,6 +38,7 @@ builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 builder.Services.AddScoped<IOrderReadRepository, OrderReadRepository>();
 builder.Services.AddScoped<GetAllOrdersPaginationQuery>();
+builder.Services.AddScoped<GetOrder>();
 builder.Services.AddScoped<UpdateOrderCommandHandler>();
 builder.Services.AddScoped<DeactivateOrderCommandHandler>();
 

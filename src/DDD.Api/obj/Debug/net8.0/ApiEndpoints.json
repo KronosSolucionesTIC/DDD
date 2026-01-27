@@ -43,6 +43,22 @@
   },
   {
     "ContainingType": "DDD.Api.Controllers.ClientsController",
+    "Method": "GetClient",
+    "RelativePath": "api/clients/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DDD.Api.Controllers.ClientsController",
     "Method": "Update",
     "RelativePath": "api/clients/{id}",
     "HttpMethod": "PUT",
@@ -136,6 +152,22 @@
         "Name": "toDate",
         "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DDD.Api.Controllers.OrdersController",
+    "Method": "GetById",
+    "RelativePath": "api/orders/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

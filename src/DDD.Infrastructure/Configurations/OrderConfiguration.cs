@@ -14,5 +14,10 @@ public class OrderConfiguration : IEntityTypeConfiguration<Order>
 
         builder.Property(o => o.TotalAmount)
                .IsRequired();
+
+        builder.HasOne(o => o.Client)
+               .WithMany()
+               .HasForeignKey(o => o.ClientId)
+               .IsRequired();
     }
 }

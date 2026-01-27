@@ -5,11 +5,12 @@ namespace DDD.Domain.Entities
     public class Order
     {
         public Guid Id { get; private set; }
-        public Guid ClientId { get; private set; }
+        public Guid ClientId { get; set; }
         public DateTime Date { get; private set; }
         public decimal TotalAmount { get; private set; }
         public DateTime CreatedAt { get; set; }
         public bool IsActive { get; private set; }
+        public Client Client { get; private set; } = default!;
 
         private Order() { }
 

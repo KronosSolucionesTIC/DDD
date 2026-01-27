@@ -12,4 +12,6 @@ public interface IOrderReadRepository
         DateTime? fromDate,
         DateTime? toDate
     );
+
+    Task<OrderResponseDto?> GetOrderAsync(Guid? clientId);
 }

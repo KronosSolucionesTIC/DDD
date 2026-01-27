@@ -3,13 +3,10 @@
 {
     public class OrderResponseDto
     {
-        public Guid OrderId { get; set; }
-        public Guid ClientId { get; set; }
-        public string ClientName { get; set; }
-        public string ClientEmail { get; set; }
-        public decimal TotalAmount { get; set; }
-        public DateTime CreatedAt { get; set; }
+        public Guid Id { get; set; }
+        public Guid IdCliente { get; set; }
+        public string? NombreCliente { get; set; }
+        public string? EmailCliente { get; set; }
+        public decimal Total { get; set; }
     }
-
-
 }

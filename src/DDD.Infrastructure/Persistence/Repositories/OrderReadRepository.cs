@@ -44,12 +44,11 @@ public class OrderReadRepository : IOrderReadRepository
             .Take(pageSize)
             .Select(x => new OrderResponseDto
             {
-                OrderId = x.o.Id,
-                ClientId = x.c.Id,
-                ClientName = x.c.Name,
-                ClientEmail = x.c.Email,
-                TotalAmount = x.o.TotalAmount,
-                CreatedAt = x.o.CreatedAt
+                Id = x.o.Id,
+                IdCliente = x.c.Id,
+                NombreCliente = x.c.Name,
+                EmailCliente = x.c.Email,
+                Total = x.o.TotalAmount
             })
             .ToListAsync();
 
@@ -59,5 +58,22 @@ public class OrderReadRepository : IOrderReadRepository
             page,
             pageSize
         );
+    }
+
+    public async Task<OrderResponseDto?> GetOrderAsync(Guid? Id)
+    {
+        return await _context.Orders
+            .AsNoTracking()
+            .Include(o => o.Client)
+            .Where(o => o.Id == Id)
+            .Select(o => new OrderResponseDto
+            {
+                Id = o.Id,
+                Total = o.TotalAmount,
+                IdCliente = o.ClientId,
+                NombreCliente = o.Client.Name,
+                EmailCliente = o.Client.Email
+            })
+            .FirstOrDefaultAsync();
     }
 }

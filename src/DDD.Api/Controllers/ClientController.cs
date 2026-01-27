@@ -12,17 +12,20 @@ namespace DDD.Api.Controllers
     public class ClientsController : ControllerBase
     {
         private readonly GetAllClientsQuery _query;
+        private readonly GetClient _getClient;
         private readonly CreateClientCommandHandler _createHandler;
         private readonly UpdateClientCommandHandler _updateHandler;
         private readonly DeactivateClientCommandHandler _deactivateHandler;
 
         public ClientsController(
             GetAllClientsQuery query,
+            GetClient getClient,
             CreateClientCommandHandler createHandler,
             UpdateClientCommandHandler updateHandler,
             DeactivateClientCommandHandler deactivateHandler)
         {
             _query = query;
+            _getClient = getClient;
             _createHandler = createHandler;
             _updateHandler = updateHandler;
             _deactivateHandler = deactivateHandler;
@@ -32,6 +35,20 @@ namespace DDD.Api.Controllers
         public async Task<IActionResult> Get()
         {
             var result = await _query.ExecuteAsync();
+
+            var response = ApiResponseMapper
+                .FromResult(result, "Clientes obtenidos correctamente");
+
+            if (!response.Success)
+                return BadRequest(response);
+
+            return Ok(response);
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetClient(Guid id)
+        {
+            var result = await _getClient.ExecuteAsync(id);
 
             var response = ApiResponseMapper
                 .FromResult(result, "Clientes obtenidos correctamente");
