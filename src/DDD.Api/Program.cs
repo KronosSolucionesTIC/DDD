@@ -13,8 +13,38 @@ using DDD.Domain.Repositories;
 using DDD.Infrastructure.Persistence;
 using DDD.Infrastructure.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using DDD.Application.Common.Security;
+using DDD.Infrastructure.Security;
 
 var builder = WebApplication.CreateBuilder(args);
+
+var jwtSettings = builder.Configuration.GetSection("Jwt");
+
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+.AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+
+        ValidIssuer = jwtSettings["Issuer"],
+        ValidAudience = jwtSettings["Audience"],
+        IssuerSigningKey = new SymmetricSecurityKey(
+            Encoding.UTF8.GetBytes(jwtSettings["Key"]!)
+        ),
+        ClockSkew = TimeSpan.Zero
+    };
+});
 
 builder.Services.AddDbContext<DDDDbContext>(options =>
     options.UseMySql(
@@ -23,6 +53,9 @@ builder.Services.AddDbContext<DDDDbContext>(options =>
     ));
 
 builder.Services.AddControllers();
+
+//Authentication
+builder.Services.AddScoped<IJwtTokenGenerator, JwtTokenGenerator>();
 
 //Clients
 builder.Services.AddScoped<CreateClientCommandHandler>();
@@ -66,6 +99,9 @@ builder.Services.AddCors(options =>
 });
 
 var app = builder.Build();
+
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.UseCors("AllowAngular");
 

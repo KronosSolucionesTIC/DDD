@@ -3,11 +3,13 @@ using DDD.Application.Clients.Commands.CreateClient;
 using DDD.Application.Clients.Commands.DeactivateClient;
 using DDD.Application.Clients.DTOs;
 using DDD.Application.Clients.Queries;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DDD.Api.Controllers
 {
     [ApiController]
+    [Authorize]
     [Route("api/clients")]
     public class ClientsController : ControllerBase
     {

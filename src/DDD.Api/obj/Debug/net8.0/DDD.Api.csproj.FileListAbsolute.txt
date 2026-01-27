@@ -1115,6 +1115,7 @@ C:\Users\LENOVO\source\repos\DDD\src\DDD.Api\bin\Debug\net8.0\refs\System.Xml.XP
 C:\Users\LENOVO\source\repos\DDD\src\DDD.Api\bin\Debug\net8.0\refs\System.Xml.XPath.XDocument.dll
 C:\Users\LENOVO\source\repos\DDD\src\DDD.Api\bin\Debug\net8.0\refs\WindowsBase.dll
 C:\Users\LENOVO\source\repos\DDD\src\DDD.Api\bin\Debug\net8.0\Humanizer.dll
+C:\Users\LENOVO\source\repos\DDD\src\DDD.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\LENOVO\source\repos\DDD\src\DDD.Api\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\LENOVO\source\repos\DDD\src\DDD.Api\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\LENOVO\source\repos\DDD\src\DDD.Api\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
@@ -1135,6 +1136,12 @@ C:\Users\LENOVO\source\repos\DDD\src\DDD.Api\bin\Debug\net8.0\Microsoft.Extensio
 C:\Users\LENOVO\source\repos\DDD\src\DDD.Api\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Physical.dll
 C:\Users\LENOVO\source\repos\DDD\src\DDD.Api\bin\Debug\net8.0\Microsoft.Extensions.FileSystemGlobbing.dll
 C:\Users\LENOVO\source\repos\DDD\src\DDD.Api\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+C:\Users\LENOVO\source\repos\DDD\src\DDD.Api\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\LENOVO\source\repos\DDD\src\DDD.Api\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\LENOVO\source\repos\DDD\src\DDD.Api\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\LENOVO\source\repos\DDD\src\DDD.Api\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\LENOVO\source\repos\DDD\src\DDD.Api\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\LENOVO\source\repos\DDD\src\DDD.Api\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\LENOVO\source\repos\DDD\src\DDD.Api\bin\Debug\net8.0\Microsoft.OpenApi.dll
 C:\Users\LENOVO\source\repos\DDD\src\DDD.Api\bin\Debug\net8.0\Mono.TextTemplating.dll
 C:\Users\LENOVO\source\repos\DDD\src\DDD.Api\bin\Debug\net8.0\MySqlConnector.dll
@@ -1148,6 +1155,7 @@ C:\Users\LENOVO\source\repos\DDD\src\DDD.Api\bin\Debug\net8.0\System.Composition
 C:\Users\LENOVO\source\repos\DDD\src\DDD.Api\bin\Debug\net8.0\System.Composition.Hosting.dll
 C:\Users\LENOVO\source\repos\DDD\src\DDD.Api\bin\Debug\net8.0\System.Composition.Runtime.dll
 C:\Users\LENOVO\source\repos\DDD\src\DDD.Api\bin\Debug\net8.0\System.Composition.TypedParts.dll
+C:\Users\LENOVO\source\repos\DDD\src\DDD.Api\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\LENOVO\source\repos\DDD\src\DDD.Api\bin\Debug\net8.0\System.IO.Pipelines.dll
 C:\Users\LENOVO\source\repos\DDD\src\DDD.Api\bin\Debug\net8.0\System.Text.Encodings.Web.dll
 C:\Users\LENOVO\source\repos\DDD\src\DDD.Api\bin\Debug\net8.0\System.Text.Json.dll

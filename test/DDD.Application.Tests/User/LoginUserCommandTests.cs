@@ -1,4 +1,5 @@
-﻿using DDD.Application.Users.Commands;
+﻿using DDD.Application.Common.Security;
+using DDD.Application.Users.Commands;
 using DDD.Application.Users.Dtos;
 using DDD.Domain.Entities;
 using DDD.Domain.Repositories;
@@ -11,11 +12,13 @@ namespace DDD.Application.Test.Users
     {
         private readonly Mock<IUserRepository> _repositoryMock;
         private readonly LoginUserCommand _command;
+        private readonly IJwtTokenGenerator _jwtTokenGenerator;
 
         public LoginUserCommandTests()
         {
             _repositoryMock = new Mock<IUserRepository>();
-            _command = new LoginUserCommand(_repositoryMock.Object);
+            _jwtTokenGenerator = new Mock<IJwtTokenGenerator>().Object;
+            _command = new LoginUserCommand(_repositoryMock.Object, _jwtTokenGenerator);
         }
 
         [Fact]

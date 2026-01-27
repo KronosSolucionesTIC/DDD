@@ -3,11 +3,13 @@ using DDD.Application.Orders.Commands;
 using DDD.Application.Orders.Commands.DeactivateOrder;
 using DDD.Application.Orders.DTOs;
 using DDD.Application.Orders.Queries;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DDD.Api.Controllers
 {
     [ApiController]
+    [Authorize]
     [Route("api/orders")]
     public class OrdersController : ControllerBase
     {
