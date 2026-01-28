@@ -1,4 +1,5 @@
 ﻿using DDD.Application.Common;
+using DDD.Application.Common.Constants;
 using DDD.Application.Orders.Commands;
 using DDD.Application.Orders.Commands.DeactivateOrder;
 using DDD.Application.Orders.DTOs;
@@ -39,7 +40,7 @@ namespace DDD.Api.Controllers
             var result = await _createHandler.Handle(command);
 
             var response = ApiResponseMapper
-                .FromResult(result, "Orden creada correctamente");
+                .FromResult(result, OrderMessages.CreateOrderSuccess);
 
             if (!response.Success)
                 return BadRequest(response);
@@ -68,10 +69,7 @@ namespace DDD.Api.Controllers
             );
 
             return Ok(
-                ApiResponseMapper.FromResult(
-                    result,
-                    "Órdenes obtenidas correctamente"
-                )
+                ApiResponseMapper.FromResult(result,OrderMessages.GetOrdersSuccess)
             );
         }
 
@@ -82,13 +80,13 @@ namespace DDD.Api.Controllers
             if (order == null)
             {
                 return NotFound(
-                    ApiResponseMapper.Fail("Orden no encontrada")
+                    ApiResponseMapper.Fail(OrderMessages.OrderNotFound)
                 );
             } 
             return Ok(
                 ApiResponseMapper.FromResult(
                     Result<OrderResponseDto>.Success(order),
-                    "Orden obtenida correctamente"
+                    OrderMessages.GetOrderSuccess
                 )
             );
         }
@@ -109,7 +107,7 @@ namespace DDD.Api.Controllers
             var result = await _updateHandler.HandleAsync(command);
 
             return result.IsSuccess
-                ? Ok(ApiResponseMapper.Success("Orden actualizada correctamente"))
+                ? Ok(ApiResponseMapper.Success(OrderMessages.UpdateOrderSuccess))
                 : BadRequest(ApiResponseMapper.Fail(result.Error));
         }
 
@@ -120,7 +118,7 @@ namespace DDD.Api.Controllers
 
             await _deactivateHandler.Handle(command);
 
-            return Ok(ApiResponseMapper.Success("Orden eliminada correctamente"));
+            return Ok(ApiResponseMapper.Success(OrderMessages.DeactivateOrderSuccess));
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using DDD.Application.Common;
+using DDD.Application.Common.Constants;
 using DDD.Application.Common.Security;
 using DDD.Application.Users.Dtos;
 using DDD.Domain.Repositories;
@@ -21,10 +22,10 @@ namespace DDD.Application.Users.Commands
             var user = await _repository.GetByUsernameAsync(request.Username);
 
             if (user is null)
-                return Result<LoginResponseDto>.Failure("Usuario o contraseña inválidos");
+                return Result<LoginResponseDto>.Failure(AuthMessages.InvalidData);
 
             if (!user.ValidatePassword(request.Password))
-                return Result<LoginResponseDto>.Failure("Usuario o contraseña inválidos");
+                return Result<LoginResponseDto>.Failure(AuthMessages.InvalidData);
 
             var token = _jwtTokenGenerator.Generate(user);
 

@@ -1,9 +1,12 @@
-﻿using DDD.Application.Users.Queries;
+﻿using DDD.Application.Common.Constants;
+using DDD.Application.Users.Queries;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DDD.Api.Controllers
 {
     [ApiController]
+    [Authorize]
     [Route("api/users")]
     public class UsersController : ControllerBase
     {
@@ -21,7 +24,7 @@ namespace DDD.Api.Controllers
             var result = await _query.ExecuteAsync();
 
             var response = ApiResponseMapper
-                .FromResult(result, "Usuarios obtenidos correctamente");
+                .FromResult(result, UserMessages.GetUsersSuccess);
 
             if (!response.Success)
                 return BadRequest(response);

@@ -3,6 +3,7 @@ using DDD.Application.Clients.Commands.CreateClient;
 using DDD.Application.Clients.Commands.DeactivateClient;
 using DDD.Application.Clients.DTOs;
 using DDD.Application.Clients.Queries;
+using DDD.Application.Common.Constants;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -39,7 +40,7 @@ namespace DDD.Api.Controllers
             var result = await _query.ExecuteAsync();
 
             var response = ApiResponseMapper
-                .FromResult(result, "Clientes obtenidos correctamente");
+                .FromResult(result, ClientMessages.GetClientSuccess);
 
             if (!response.Success)
                 return BadRequest(response);
@@ -53,7 +54,7 @@ namespace DDD.Api.Controllers
             var result = await _getClient.ExecuteAsync(id);
 
             var response = ApiResponseMapper
-                .FromResult(result, "Clientes obtenidos correctamente");
+                .FromResult(result, ClientMessages.GetClientSuccess);
 
             if (!response.Success)
                 return BadRequest(response);
@@ -67,7 +68,7 @@ namespace DDD.Api.Controllers
             var result = await _createHandler.Handle(command);
 
             var response = ApiResponseMapper
-                .FromResult(result, "Cliente creado correctamente");
+                .FromResult(result, ClientMessages.CreateClientSuccess);
 
             if (!response.Success)
                 return BadRequest(response);
@@ -92,7 +93,7 @@ namespace DDD.Api.Controllers
 
             await _updateHandler.Handle(command);
 
-            return Ok(ApiResponseMapper.Success("Cliente actualizado correctamente"));
+            return Ok(ApiResponseMapper.Success(ClientMessages.UpdateClientSuccess));
         }
 
         [HttpDelete("{id}")]
@@ -102,7 +103,7 @@ namespace DDD.Api.Controllers
 
             await _deactivateHandler.Handle(command);
 
-            return Ok(ApiResponseMapper.Success("Cliente eliminado correctamente"));
+            return Ok(ApiResponseMapper.Success(ClientMessages.DeleteClientSuccess));
         }
     }
 }

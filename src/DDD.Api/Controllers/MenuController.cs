@@ -1,6 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using DDD.Application.Common.Constants;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 [ApiController]
+[Authorize]
 [Route("api/menu")]
 public class MenuController : ControllerBase
 {
@@ -16,7 +19,7 @@ public class MenuController : ControllerBase
     {
         var result = await _query.ExecuteAsync();
         var response = ApiResponseMapper
-            .FromResult(result, "Menu obtenido correctamente");
+            .FromResult(result, MenuMessages.GetMenuSuccess);
 
         if (!response.Success)
             return BadRequest(response);
