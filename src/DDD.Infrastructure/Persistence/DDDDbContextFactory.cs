@@ -19,10 +19,7 @@ public class DDDDbContextFactory : IDesignTimeDbContextFactory<DDDDbContext>
 
         var optionsBuilder = new DbContextOptionsBuilder<DDDDbContext>();
 
-        optionsBuilder.UseMySql(
-            connectionString,
-            new MySqlServerVersion(new Version(8, 0, 36))
-        );
+        optionsBuilder.UseSqlServer(connectionString);
 
         return new DDDDbContext(optionsBuilder.Options);
     }
