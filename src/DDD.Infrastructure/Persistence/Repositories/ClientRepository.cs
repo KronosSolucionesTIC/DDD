@@ -6,9 +6,9 @@ namespace DDD.Infrastructure.Persistence.Repositories;
 
 public class ClientRepository : IClientRepository
 {
-    private readonly DDDDbContext _context;
+    private readonly AppDbContext _context;
 
-    public ClientRepository(DDDDbContext context)
+    public ClientRepository(AppDbContext context)
     {
         _context = context;
     }

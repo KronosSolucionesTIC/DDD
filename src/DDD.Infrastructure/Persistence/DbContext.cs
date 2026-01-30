@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DDD.Infrastructure.Persistence;
 
-public class DDDDbContext : DbContext
+public class AppDbContext : DbContext
 {
-    public DDDDbContext(DbContextOptions<DDDDbContext> options)
+    public AppDbContext(DbContextOptions<AppDbContext> options)
         : base(options)
     {
     }
@@ -17,6 +17,6 @@ public class DDDDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.ApplyConfigurationsFromAssembly(typeof(DDDDbContext).Assembly);
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
     }
 }

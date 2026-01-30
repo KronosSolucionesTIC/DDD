@@ -6,9 +6,9 @@ namespace DDD.Infrastructure.Persistence.Repositories;
 
 public class UserRepository : IUserRepository
 {
-    private readonly DDDDbContext _context;
+    private readonly AppDbContext _context;
 
-    public UserRepository(DDDDbContext context)
+    public UserRepository(AppDbContext context)
     {
         _context = context;
     }

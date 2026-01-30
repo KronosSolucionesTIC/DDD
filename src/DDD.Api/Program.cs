@@ -19,7 +19,13 @@ using System.Text;
 using DDD.Application.Common.Security;
 using DDD.Infrastructure.Security;
 
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer(
+        builder.Configuration.GetConnectionString("DefaultConnection")
+    ));
 
 var jwtSettings = builder.Configuration.GetSection("Jwt");
 
@@ -45,11 +51,6 @@ builder.Services.AddAuthentication(options =>
         ClockSkew = TimeSpan.Zero
     };
 });
-
-builder.Services.AddDbContext<DDDDbContext>(options =>
-    options.UseSqlServer(
-        builder.Configuration.GetConnectionString("DefaultConnection")
-    ));
 
 builder.Services.AddControllers();
 

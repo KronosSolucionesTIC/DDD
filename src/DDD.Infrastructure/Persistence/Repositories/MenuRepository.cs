@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 
 public class MenuRepository : IMenuRepository
 {
-    private readonly DDDDbContext _context;
+    private readonly AppDbContext _context;
 
-    public MenuRepository(DDDDbContext context)
+    public MenuRepository(AppDbContext context)
     {
         _context = context;
     }

@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DDD.Infrastructure.Migrations
 {
-    [DbContext(typeof(DDDDbContext))]
-    [Migration("20260128234846_InitialSqlServer")]
+    [DbContext(typeof(AppDbContext))]
+    [Migration("20260130141549_InitialSqlServer")]
     partial class InitialSqlServer
     {
         /// <inheritdoc />

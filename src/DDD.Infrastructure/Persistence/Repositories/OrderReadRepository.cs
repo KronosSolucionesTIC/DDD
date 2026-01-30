@@ -6,9 +6,9 @@ using Microsoft.EntityFrameworkCore;
 
 public class OrderReadRepository : IOrderReadRepository
 {
-    private readonly DDDDbContext _context;
+    private readonly AppDbContext _context;
 
-    public OrderReadRepository(DDDDbContext context)
+    public OrderReadRepository(AppDbContext context)
     {
         _context = context;
     }

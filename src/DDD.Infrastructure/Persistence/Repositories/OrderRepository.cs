@@ -6,9 +6,9 @@ namespace DDD.Infrastructure.Persistence.Repositories
 {
     public class OrderRepository : IOrderRepository
     {
-        private readonly DDDDbContext _context;
+        private readonly AppDbContext _context;
 
-        public OrderRepository(DDDDbContext context)
+        public OrderRepository(AppDbContext context)
         {
             _context = context;
         }
