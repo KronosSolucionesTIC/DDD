@@ -95,7 +95,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "MenuController",
+    "ContainingType": "DDD.Api.Controllers.MenuController",
     "Method": "Get",
     "RelativePath": "api/menu",
     "HttpMethod": "GET",

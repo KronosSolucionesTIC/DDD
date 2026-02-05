@@ -93,17 +93,17 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAngular",
-        p => p.AllowAnyOrigin()
+        p => p.WithOrigins("http://localhost:4200")
+              .AllowAnyOrigin()
               .AllowAnyHeader()
               .AllowAnyMethod());
 });
 
 var app = builder.Build();
 
+app.UseCors("AllowAngular");
 app.UseAuthentication();
 app.UseAuthorization();
-
-app.UseCors("AllowAngular");
 
 app.UseHttpsRedirection();
 

@@ -2,28 +2,31 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-[ApiController]
-[Authorize]
-[Route("api/menu")]
-public class MenuController : ControllerBase
+namespace DDD.Api.Controllers
 {
-    private readonly GetMenuQuery _query;
-
-    public MenuController(GetMenuQuery query)
+    [ApiController]
+    [Authorize]
+    [Route("api/menu")]
+    public class MenuController : ControllerBase
     {
-        _query = query;
-    }
+        private readonly GetMenuQuery _query;
 
-    [HttpGet]
-    public async Task<IActionResult> Get()
-    {
-        var result = await _query.ExecuteAsync();
-        var response = ApiResponseMapper
-            .FromResult(result, MenuMessages.GetMenuSuccess);
+        public MenuController(GetMenuQuery query)
+        {
+            _query = query;
+        }
 
-        if (!response.Success)
-            return BadRequest(response);
+        [HttpGet]
+        public async Task<IActionResult> Get()
+        {
+            var result = await _query.ExecuteAsync();
+            var response = ApiResponseMapper
+                .FromResult(result, MenuMessages.GetMenuSuccess);
 
-        return Ok(response);
+            if (!response.Success)
+                return BadRequest(response);
+
+            return Ok(response);
+        }
     }
 }
