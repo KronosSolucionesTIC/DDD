@@ -101,7 +101,7 @@ namespace DDD.Api.Controllers
                 OrderId = id,
                 ClientId = request.ClientId,
                 TotalAmount = request.TotalAmount,
-                Date = request.Date
+                Date = DateTime.UtcNow
             };
 
             var result = await _updateHandler.HandleAsync(command);

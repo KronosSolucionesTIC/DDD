@@ -423,10 +423,6 @@
           "totalAmount": {
             "type": "number",
             "format": "double"
-          },
-          "date": {
-            "type": "string",
-            "format": "date-time"
           }
         },
         "additionalProperties": false
